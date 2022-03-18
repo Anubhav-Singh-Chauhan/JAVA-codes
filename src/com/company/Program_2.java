@@ -19,7 +19,5 @@ public class Program_2 {
          percentage = (total/500)*100;
         System.out.print("Your Percentage is: ");
         System.out.println(percentage + "%");
-
     }
-
 }
