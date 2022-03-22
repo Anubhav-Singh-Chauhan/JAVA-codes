@@ -1,7 +1,7 @@
 package com.company;
 import java.util.Scanner;
 
-public class Program_1 {
+public class C1_TakingInput {
     public static void main(String[] args){
         System.out.println("Take Input");
         Scanner sc = new Scanner(System.in);  //To read the data from keyboard
