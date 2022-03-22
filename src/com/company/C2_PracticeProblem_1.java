@@ -1,6 +1,6 @@
 package com.company;
 import java.util.Scanner;
-public class Program_2 {
+public class C2_PracticeProblem_1 {
     public static void main(String[] args){
         float total, percentage;
         Scanner sc = new Scanner(System.in);
