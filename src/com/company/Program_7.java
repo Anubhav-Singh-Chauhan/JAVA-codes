@@ -8,6 +8,7 @@ public class Program_7 {
         String s=str.toLowerCase();
 
         System.out.println(s);
+        System.out.println(".");
 
     }
 }
