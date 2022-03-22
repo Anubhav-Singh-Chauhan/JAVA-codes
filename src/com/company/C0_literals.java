@@ -1,6 +1,6 @@
 package com.company;
 
-public class Literals {
+public class C0_literals {
     public static void main(String[] args){
         byte age = 20;
         char ch='A';
