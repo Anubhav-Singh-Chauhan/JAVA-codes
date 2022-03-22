@@ -1,6 +1,6 @@
 package com.company;
 import java.util.Scanner;
-public class Program_4 {
+public class C4_PracticeProblem_3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
      //   String str = sc.next();
