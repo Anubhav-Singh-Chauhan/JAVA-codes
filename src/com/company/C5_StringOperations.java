@@ -1,7 +1,7 @@
 package com.company;
 
 
-public class Program_5 {
+public class C5_StringOperations {
     public static void main(String[] args) {
         /*
         String str = "Coding";
