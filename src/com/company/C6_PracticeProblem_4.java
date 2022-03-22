@@ -1,7 +1,7 @@
 package com.company;
 //1. replace spaces with underscores in a string.
 //2. Detect triple and double spaces in a string.
-public class Program_6 {
+public class C6_PracticeProblem_4 {
     public static void main(String[] args) {
 // 1.
         String str = "Hello good morning";
