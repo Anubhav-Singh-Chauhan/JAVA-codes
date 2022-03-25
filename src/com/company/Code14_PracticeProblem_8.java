@@ -1,6 +1,6 @@
 package com.company;
 
-public class C14_PracticeProblem_8 {
+public class Code14_PracticeProblem_8 {
     public static void main(String[] args) {
         int [][] A = {{10,11,12},
                       {13,14,15}};
