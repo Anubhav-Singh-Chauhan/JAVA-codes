@@ -20,30 +20,31 @@ public class C9_PracticeProblem_6 {
             x = sc.nextInt();
             System.out.println("Computer number: " + random);
 
+
             if (x == random) {
                 System.out.println("Draw");
             }
-            if (x == 1 && random == 0) {
+             if (x == 1 && random == 0) {
                 System.out.println("Computer -> Rock  You -> Scissor\nComputer won");
             }
-            if (x == 0 && random == 1) {
+             if (x == 0 && random == 1) {
                 System.out.println("Computer -> Scissor  You -> Rock\nYou won");
             }
-            if (x == 1 && random == 2) {
+             if (x == 1 && random == 2) {
                 System.out.println("Computer -> Paper  You -> Scissor\nYou won");
             }
-            if (x == 2 && random == 1) {
+             if (x == 2 && random == 1) {
                 System.out.println("Computer -> Scissor  You -> Paper\nComputer won");
             }
-            if (x == 0 && random == 2) {
+             if (x == 0 && random == 2) {
                 System.out.println("Computer -> Paper  You -> Rock\nComputer won");
             }
-            if (x == 2 && random == 0) {
+             if (x == 2 && random == 0) {
                 System.out.println("Computer -> Rock  You -> Paper\nYou won");
             }
-
         }
     }
-    }
+}
+
 
 
