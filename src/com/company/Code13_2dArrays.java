@@ -1,6 +1,6 @@
 package com.company;
 
-public class C13_2dArrays {
+public class Code13_2dArrays {
     public static void main(String[] args) {
         int [][] arr = {{10,11,12},{13,14,15}};
 
