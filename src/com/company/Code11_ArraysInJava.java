@@ -1,6 +1,6 @@
 package com.company;
 
-public class C11_ArraysInJava {
+public class Code11_ArraysInJava {
     public static void main(String[] args) {
         // 1. Declaration and Memory Allocation at same time
         int [] arr = new int[5];
