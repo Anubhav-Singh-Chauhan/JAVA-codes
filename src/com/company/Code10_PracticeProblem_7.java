@@ -1,6 +1,6 @@
 package com.company;
 import java.util.Scanner;
-public class C10_PracticeProblem_7 {
+public class Code10_PracticeProblem_7 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
