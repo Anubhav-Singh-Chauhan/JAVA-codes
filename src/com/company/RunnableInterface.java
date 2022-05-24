@@ -1,6 +1,8 @@
 package com.company;
 import java.lang.*;
+
 //Runnable Interface - This the better way to create thread.
+
 public class RunnableInterface implements Runnable
 {
     public void run()
