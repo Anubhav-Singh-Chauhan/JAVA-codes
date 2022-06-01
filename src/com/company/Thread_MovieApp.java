@@ -20,7 +20,7 @@ class BookSeat
 }
 
 
-public class MovieApp extends Thread{
+public class Thread_MovieApp extends Thread{
     static BookSeat b;
     int seats;
     public void run()
@@ -29,11 +29,11 @@ public class MovieApp extends Thread{
     }
     public static void main(String[] args) {
      b = new BookSeat();
-     MovieApp peter = new MovieApp();
+     Thread_MovieApp peter = new Thread_MovieApp();
      peter.seats = 7;
      peter.start();
 
-     MovieApp sam = new MovieApp();
+     Thread_MovieApp sam = new Thread_MovieApp();
      sam.seats=6;
      sam.start();
     }
