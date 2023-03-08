@@ -110,6 +110,7 @@ public class practice {
             while(i<y){
                 int x = Math.min(height[y],height[i]);
                 ans = Math.max(ans,x*x);
+                y--;
             }
         }
         System.out.println(ans);
