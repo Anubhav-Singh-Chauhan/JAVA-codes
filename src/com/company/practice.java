@@ -103,7 +103,16 @@ public class practice {
     //     return Integer.toString(Integer.parseInt(number, sBase), dBase);
     // }
 
-    
+    int height[] = {1,8,6,2,5,4,8,3,7};
+    int y = height.length-1;
+        int ans = 0;
+        for(int i=0;i<height.length;i++){
+            while(i<y){
+                int x = Math.min(height[y],height[i]);
+                ans = Math.max(ans,x*x);
+            }
+        }
+        System.out.println(ans);
     }
     }
     
