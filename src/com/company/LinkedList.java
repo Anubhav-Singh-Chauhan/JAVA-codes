@@ -151,6 +151,24 @@ public class LinkedList {
     }
 
 
+    // Q1 Reverse a Linked List // 1 2 3 4 5
+
+    public void reverse()
+    {
+        Node prev = null;
+        Node curr = tail = head;
+        Node next;
+
+        while(curr!=null)
+        {
+            next=curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+    }
+
 
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
@@ -162,16 +180,16 @@ public class LinkedList {
         ll.print();
 
         //size
-        System.out.println(ll.size);
+        // System.out.println(ll.size);
 
         //remove
-        ll.removeFirst();
-        ll.print();
-        ll.removeLast();
-        ll.print();
+        // ll.removeFirst();
+        // ll.print();
+        // ll.removeLast();
+        // ll.print();
 
         //search
-        ll.itrSearch(9);
+        // ll.itrSearch(9);
     }
     
 }
