@@ -151,23 +151,9 @@ public class LinkedList {
     }
 
 
-    // Q1 Reverse a Linked List // 1 2 3 4 5
+    //Q2 Find and remove Nth node from End
 
-    public void reverse()
-    {
-        Node prev = null;
-        Node curr = tail = head;
-        Node next;
 
-        while(curr!=null)
-        {
-            next=curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = next;
-        }
-        head = prev;
-    }
 
 
     public static void main(String[] args) {
