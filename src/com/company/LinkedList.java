@@ -150,37 +150,7 @@ public class LinkedList {
         
     }
 
-
-    //Q2 Find and remove Nth node from End
-    public void deleteNthFromEnd(int n)
-    {
-        int Size = 0;
-        Node temp = head;
-        while(temp!=null)
-        {
-            temp = temp.next;
-            Size++;
-        }
-
-        if(n==Size)
-        {
-            head = head.next;
-            return;
-        }
-        int i=1;
-        int iToFind = Size - n;
-        Node prev = head;
-        while(i<iToFind)
-        {
-            prev = prev.next;
-            i++;
-        }
-        prev.next = prev.next.next;
-        return;
-    }
-
-
-
+    
 
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
