@@ -150,32 +150,19 @@ public class LinkedList {
         
     }
 
-    public boolean isCycle()
-    {
-        Node slow = head, fast = head;
-        while(fast!=null && fast.next!=null)
-        {
-            slow = slow.next;
-            fast = fast.next.next;
-
-            if(slow == fast){
-                return true;
-            }
-        }
-        return false;
-    }
+    
 
     public static void main(String[] args) {
-        LinkedList ll = new LinkedList();
-        //add
-        ll.addFirst(1);
-        ll.addFirst(3); 
-        ll.addLast(4);
-        ll.addAtIndex(2,9);
-        ll.print();
+        // LinkedList ll = new LinkedList();
+        // //add
+        // ll.addFirst(1);
+        // ll.addFirst(3); 
+        // ll.addLast(4);
+        // ll.addAtIndex(2,9);
+        // ll.print();
 
-        //size
-        System.out.println(size);
+        // //size
+        // System.out.println(size);
 
         //remove
         // ll.removeFirst();
@@ -185,6 +172,14 @@ public class LinkedList {
 
         //search
         // ll.itrSearch(9);
+        // head = new Node(1);
+        // Node temp = new Node(2);
+        // head.next = temp;
+        // head.next.next = new Node(3);
+        // head.next.next.next = temp;
+
+        // RemoveCycle();
+        // System.out.println(RemoveCycle());
     }
     
 }
