@@ -1,6 +1,8 @@
 public class LLQues {
 
     // Q1 Reverse a Linked List
+
+
     /*
      * 
      * public void reverse()
@@ -23,9 +25,8 @@ public class LLQues {
 
 
 
-
-
     // Q2 Find and remove Nth node from End
+
 
     /*
      * public void deleteNthFromEnd(int n)
@@ -58,9 +59,9 @@ public class LLQues {
 
 
 
-
-
     // Q3 check LL is plaindrome or not
+
+
     /*
      * public Node findMid(Node head)
      * {
@@ -114,28 +115,67 @@ public class LLQues {
 
 
 
-
-
     // Q4 Detect a cycle/Loop in a LL {Floyd's Cycle Finding Algorithm}
 
+    
     /*
-       public boolean isCycle()
-    {
-        Node slow = head, fast = head;
-        while(fast!=null && fast.next!=null)
-        {
-            slow = slow.next;
-            fast = fast.next.next;
-
-            if(slow == fast){
-                return true;
-            }
-        }
-        return false;
-    }
+     * public boolean isCycle()
+     * {
+     * Node slow = head, fast = head;
+     * while(fast!=null && fast.next!=null)
+     * {
+     * slow = slow.next;
+     * fast = fast.next.next;
+     * 
+     * if(slow == fast){
+     * return true;
+     * }
+     * }
+     * return false;
+     * }
      */
 
 
 
-     // Q5 
+
+    // Q5 Removing Cycle from LL
+
+
+    /*
+     * 
+     * 
+     * public static boolean RemoveCycle()
+     * {
+     * Node slow = head, fast = head;
+     * boolean cycle = false;
+     * while(fast!=null && fast.next!=null)
+     * {
+     * slow = slow.next;
+     * fast = fast.next.next;
+     * 
+     * if(slow == fast){
+     * cycle = true;
+     * break;
+     * }
+     * }
+     * 
+     * if(cycle==false)
+     * {
+     * return false;
+     * }
+     * Node prev = null;
+     * slow = head;
+     * while(slow!=fast)
+     * {
+     * prev = slow;
+     * slow = slow.next;
+     * fast = fast.next;
+     * }
+     * 
+     * prev.next=null;
+     * System.out.println("Cycle Removed");
+     * return true;
+     * 
+     * }
+     */
 }
