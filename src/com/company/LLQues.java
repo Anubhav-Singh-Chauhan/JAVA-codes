@@ -252,30 +252,77 @@ public class LLQues {
         ll.addLast(6);
         ll.addLast(2);
 
-        // ll.addAtIndex(2,9);
         ll.print();
         ll.head = ll.mergeSort(head);
-
-        // //size
-        // System.out.println(size);
-
-        //remove
-        // ll.removeFirst();
         ll.print();
-        // ll.removeLast();
-        // ll.print();
-
-        //search
-        // ll.itrSearch(9);
-        // head = new Node(1);
-        // Node temp = new Node(2);
-        // head.next = temp;
-        // head.next.next = new Node(3);
-        // head.next.next.next = temp;
-
-        // RemoveCycle();
-        // System.out.println(RemoveCycle());
+        
 
     }
       */
+
+      // Q7 ZigZag Linked List
+      /*
+       public Node findMid()
+    {
+        Node left = head;
+        Node right = head.next;
+        while(right!=null && right.next!=null)
+        {
+            right = right.next.next;
+            left = left.next;
+        }
+        return left;
+    }
+   
+    public void ZigZag(Node head)
+   {
+      Node mid = findMid();
+
+      //reverse 2nd Half
+      Node prev = null;
+      Node curr = mid.next;
+      mid.next = null;
+      Node next;
+      while(curr!=null)
+      {
+        next = curr.next;
+        curr.next = prev;
+        prev = curr;
+        curr = next;
+      }
+
+
+      //zig-zag merge
+      Node leftHead = head;
+      Node rightHead = prev;
+
+      Node L,R;
+      while(leftHead!=null && rightHead!=null)
+      {
+        L = leftHead.next;
+        leftHead.next = rightHead;
+        R = rightHead.next;
+        rightHead.next = L;
+        //updation
+        leftHead = L;
+        rightHead = R;
+      }
+   }
+
+    public static void main(String[] args) {
+        LinkedList ll = new LinkedList();
+        //add
+        ll.addFirst(2);
+        ll.addFirst(1); 
+        ll.addLast(3);
+        ll.addLast(4);
+        ll.addLast(5);
+
+        ll.print();
+        ll.ZigZag(head);
+        ll.print();
+
+    }
+       */
+
 }
