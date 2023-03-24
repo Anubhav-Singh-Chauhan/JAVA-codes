@@ -67,7 +67,7 @@ public class BinaryTree {
     }
 
 
-    public static LevelOrder(Node root)
+    public static void LevelOrder(Node root)   //O(n)
     {
         if(root==null)
         {
@@ -85,10 +85,10 @@ public class BinaryTree {
                 if(q.isEmpty()){
                     break;
                 }else{
-                    q.add(null)
+                    q.add(null);
                 }
             }else{
-                System.out.println(currNode.data+" ");
+                System.out.print(currNode.data+" ");
                 if(currNode.left!=null){
                     q.add(currNode.left);
                 }
@@ -99,17 +99,70 @@ public class BinaryTree {
             }
         }
     }
+
+    public static int Height(Node root)
+    {
+        if(root==null){
+            return 0;
+        }
+
+        int lh = Height(root.left);
+        int rh = Height(root.right);
+
+        return Math.max(lh, rh)+1;
+    }
+
+    public static int countNodes(Node root){
+        if(root==null){
+            return 0;
+        }
+
+        int lc = countNodes(root.left);
+        int rc = countNodes(root.right);
+       return lc+rc+1;
+    }
+
+    public static int Sum(Node root){
+        if(root==null){
+            return 0;
+        }
+
+        int lc = Sum(root.left);
+        int rc = Sum(root.right);
+       return lc+rc+root.data;
+    }
+
+
     
     public static void main(String[] args) {
         int nodes[] = {1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
         BinaryT tree = new BinaryT();
         Node root = tree.buildeTree(nodes);
         
-        Preorder(root);
+        // Preorder(root);
 
-        Inorder(root);
+        // Inorder(root);
 
-        Postorder(root); 
-    }
+        // Postorder(root); 
+
+        // LevelOrder(root);
+
+        /*
+                    1
+                   /  \
+                  2    3
+                 / \  / \
+                4   5 6  7
+         */
+        Node root1 = new Node(1);
+        root1.left = new Node(2);
+        root1.right = new Node(3); 
+        root1.left.left = new Node(4);
+        root1.left.right = new Node(5);
+        root1.right.left = new Node(6);
+        root1.right.right = new Node(7);
+        // System.out.println(Height(root1));
+        System.out.println(countNodes(root1));
     
+}
 }
