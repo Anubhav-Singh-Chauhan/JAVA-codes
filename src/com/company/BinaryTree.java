@@ -132,6 +132,20 @@ public class BinaryTree {
        return lc+rc+root.data;
     }
 
+    public static int diameterApproach1(Node root)  //O(n^2)
+    {
+        if(root == null) return 0;
+
+        int leftD = diameterApproach1(root.left);
+        int rightD = diameterApproach1(root.right);
+        int rightH = Height(root.right);
+        int leftH = Height(root.left);
+
+        int selfDiameter = leftH + rightH + 1;
+
+        return Math.max(selfDiameter,Math.max(rightD, leftD));
+    }
+
 
     
     public static void main(String[] args) {
@@ -163,6 +177,8 @@ public class BinaryTree {
         root1.right.right = new Node(7);
         // System.out.println(Height(root1));
         System.out.println(countNodes(root1));
+
+        System.out.println(diameterApproach1(root1));
     
 }
 }
