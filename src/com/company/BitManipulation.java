@@ -44,6 +44,22 @@ public class BitManipulation {
         return n | bitMask;
     }
 
+    public static int clearLastIbits(int n,int i)
+    {
+        int bitMask = (~0)<<i;
+        return n&bitMask;
+    }
+
+    public static int clearRangeOfBits(int n,int i,int j)
+    {
+         int a = (~0)<<(j+1);
+         int b= (1<<i)-1;
+
+         int bitMask = a|b;
+
+         return n&bitMask;
+    }
+
     public static void main(String[] args) {
         System.out.println(5 & 6); // Binary AND
         System.out.println(5 | 6); // Binary OR
@@ -83,6 +99,16 @@ public class BitManipulation {
         //updateIthBit
         System.out.println(updateIthBit(10, 2, 1));
         System.out.println(updateIthBit(10, 1, 0));
+
+        //-------------------------------------------------
+
+        //clearLastIBits
+        System.out.println(clearLastIbits(15, 2));
+
+        //-------------------------------------------------
+
+        //clearRangeOfBits
+        System.out.println(clearRangeOfBits(1363, 2, 7));
 
     }
 }
