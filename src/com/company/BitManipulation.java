@@ -25,6 +25,25 @@ public class BitManipulation {
          return num;
     }
 
+    public static int clearIthBit(int n,int i)
+    {
+        int bitMask = ~(1<<i);
+         int num = (n&bitMask);
+         return num;
+    }
+
+    public static int updateIthBit(int n,int i, int newBit)
+    {
+        // if(newBit==0){
+        //     return clearIthBit(n, i);
+        // }else{
+        //     return setIthBit(n, i);
+        // }
+        n = clearIthBit(n, i);
+        int bitMask = newBit<<i;
+        return n | bitMask;
+    }
+
     public static void main(String[] args) {
         System.out.println(5 & 6); // Binary AND
         System.out.println(5 | 6); // Binary OR
@@ -46,11 +65,24 @@ public class BitManipulation {
         System.out.println(getIthBit(4, 4));
         //---------------------------------------------
 
-        // set ith bit in any binary number
+        // get ith bit in any binary number
         System.out.println(getIthBit(10, 3));
         System.out.println(getIthBit(4, 4));
         //---------------------------------------------
+
+        // set ith bit in any binary number
         System.out.println(setIthBit(10, 2));
+
+        //---------------------------------------------
+
+        //clearIthBit
+        System.out.println(clearIthBit(10, 1));
+
+        //----------------------------------------------
+
+        //updateIthBit
+        System.out.println(updateIthBit(10, 2, 1));
+        System.out.println(updateIthBit(10, 1, 0));
 
     }
 }
