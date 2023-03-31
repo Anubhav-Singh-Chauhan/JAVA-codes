@@ -31,6 +31,27 @@ public class RecursionJava {
         int fn = n*factorial(n-1);
         return fn;
     }
+
+    //print sum of first n natural numbers
+    public static int calSum(int n)
+    {
+        if(n==1){
+            return 1;
+        }
+        int sum = n + calSum(n-1);
+        return sum;
+    }
+
+    //print nth fibonacci number
+    public static int fib(int n)
+    {
+        if(n==0) return 0;
+        if(n==1) return 1;
+
+        int fibonacci = fib(n-1) + fib(n-2);
+
+        return fibonacci;
+    }
     public static void main(String[] args) {
         int n = 10;
         printValDec(n);
@@ -38,6 +59,10 @@ public class RecursionJava {
         
         System.out.println();
         System.out.println(factorial(5));
+
+        System.out.println(calSum(n)); 
+
+        System.out.println(fib(25));
     }
     
 }
