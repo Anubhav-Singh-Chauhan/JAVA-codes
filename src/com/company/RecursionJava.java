@@ -43,7 +43,7 @@ public class RecursionJava {
     }
 
     //print nth fibonacci number
-    public static int fib(int n)
+    public static int fib(int n)   // tree calls // complexity O(2^n)
     {
         if(n==0) return 0;
         if(n==1) return 1;
