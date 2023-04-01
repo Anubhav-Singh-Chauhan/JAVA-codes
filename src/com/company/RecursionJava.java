@@ -49,8 +49,14 @@ public class RecursionJava {
         if(n==1) return 1;
 
         int fibonacci = fib(n-1) + fib(n-2);
-
         return fibonacci;
+    }
+
+    //check if array is sorted or not
+    public static boolean isSorted(int arr[],int i)
+    {
+
+        return true;
     }
     public static void main(String[] args) {
         int n = 10;
